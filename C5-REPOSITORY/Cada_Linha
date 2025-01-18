@@ -1,0 +1,46 @@
+namespace Cada_Linha {
+
+    class Cada_linha {
+
+        static void Main(string[] args){
+
+            int L , C , i , o ;
+            double maior ;
+
+            Console.WriteLine("Qual a ordem da matriz ");
+            L = int.Parse(Console.ReadLine());
+            
+            double[,] mat = new double[L , L];
+
+            double[] maiorlinha = new double [L];
+
+            for(i = 0; i < L; i++){
+                for(o = 0; o < L; o++){
+                Console.WriteLine("Elemento ["+ i + ","+ o + "]: ");
+                mat[i, o] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                
+                }
+            }
+
+            for(i = 0; i < L; i++)
+            {
+                maior = mat[i, 0];
+                for(o = 1; o < L; o++)
+                {
+                    if(maior < mat[i, o]){
+                        maior = mat[i, o];
+                    }
+                    
+                    }
+                    maiorlinha[i] = maior;
+                }
+                Console.WriteLine("MAIOR ELEMENTO DE CADA LINHA : ");
+
+                for(i = 0; i < L; i ++){
+                Console.WriteLine(maiorlinha[i]);
+            }
+        }
+
+
+        }
+    }

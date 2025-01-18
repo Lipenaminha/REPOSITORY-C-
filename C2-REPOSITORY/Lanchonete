@@ -1,0 +1,61 @@
+class lanchonete
+{
+
+
+
+    static void Main(string[] args)
+    {
+
+      double codigo1 = 5.00;
+      double codigo2 = 3.50;
+      double codigo3 = 4.80;
+      double codigo4 = 8.90;
+      double codigo5 = 7.32;
+      int codigo = 0;
+      int quantidade = 0;
+      double valor = 0;
+
+      Console.WriteLine("Codigo do produto comprado : ");
+      codigo = int.Parse(Console.ReadLine());
+
+      Console.WriteLine("Quantidade comprada : ");
+      quantidade = int.Parse(Console.ReadLine());
+
+
+      if(codigo == 1){
+         valor = codigo1 * quantidade;
+
+         Console.WriteLine($" Valor a pagar: {valor:F2}");
+      }
+      else if (codigo == 2){
+         valor = codigo2 * quantidade;
+
+           Console.WriteLine($" Valor a pagar: {valor:F2}");
+      }
+
+      else if (codigo == 3){
+         valor = codigo3 * quantidade;
+
+           Console.WriteLine($" Valor a pagar: {valor:F2}");
+      }
+
+      else if (codigo == 4 ){
+         valor = codigo4 * quantidade;
+
+           Console.WriteLine($" Valor a pagar: {valor:F2}");
+      }
+
+      else if (codigo == 5 ){
+         valor = codigo5 * quantidade;
+
+           Console.WriteLine($" Valor a pagar: {valor:F2}");
+      }
+
+      else if (codigo <= 0 || codigo >= 6){
+         Console.WriteLine("CODIGO INVALIDO, ESCOLHA NOVAMENTE ENTRE [1 até 5]");
+      }
+
+
+
+}
+}

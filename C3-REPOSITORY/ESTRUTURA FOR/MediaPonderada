@@ -1,0 +1,43 @@
+class Media_Ponderada{
+
+
+ static void Main(string[] args){
+
+int N ;
+double media;
+double media2;
+double media3;
+double soma = 0;
+
+Console.WriteLine("Quantos casos voce vai digitar ? : ");
+ N  = int.Parse(Console.ReadLine());
+
+
+media = 0;
+media2 = 0;
+ media3 = 0;
+ double numero1 = 0;
+ double numero2 = 0;
+ double numero3 = 0;
+
+
+
+ for(int i = 1; i < N; i++){
+
+  Console.WriteLine("Digite tres numeros ");
+  numero1 = double.Parse(Console.ReadLine());
+  numero2 = double.Parse(Console.ReadLine());
+  numero3 = double.Parse(Console.ReadLine());
+
+  media = numero1 * 2;
+  media2 = numero2 * 3;
+  media3 = numero3 * 5;
+
+  soma = (media + media2 + media3);
+  double valorreal = soma / 10;
+  double valoraredonda = Math.Round(valorreal,1);
+
+
+
+       Console.WriteLine($"Valor arredondado: {valoraredonda.ToString("F1", System.Globalization.CultureInfo.InvariantCulture)}");
+       Console.WriteLine($"media = {soma}");

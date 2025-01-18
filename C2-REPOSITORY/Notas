@@ -1,0 +1,30 @@
+class notas {
+
+
+ static void Main(string[] args){
+
+    double N1 = 0;
+    double N2 = 0;
+    double media = 0;
+
+
+    Console.WriteLine("Digite a primeira nota : ");
+    N1 = double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite a segunda nota : ");
+    N2 = double.Parse(Console.ReadLine());
+
+    media = N1 + N2;
+
+    Console.WriteLine($"MEDIA FINAL = {media:F1}");
+
+    if(media >= 60.00){
+        Console.WriteLine("APROVADO ! ");
+
+    } 
+    else{
+        Console.WriteLine("REPROVADO ! ");
+    }
+  
+ }
+}

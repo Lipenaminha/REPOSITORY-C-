@@ -1,0 +1,45 @@
+namespace MaiorPosicao {
+class MaiorPosicao {
+
+    static void Main(string[] args) {
+
+    Console.WriteLine("Quantos numeros voce vai digitar ?");
+    int N = int.Parse(Console.ReadLine());
+
+    double[] vet = new double [N]; 
+     double Maior = 0;
+     int Valor = 0;
+
+    for(int i = 0; i < N; i++){
+        Console.WriteLine("Digite um numero : ");
+        vet[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+
+
+    } 
+
+        Maior = 0;
+        vet[0] = Maior;
+
+        for(int i = 1; i < N-1; i++){
+            if(vet[i] > Maior)
+            Maior = vet[i];
+            
+        }
+
+        Valor = 0;
+        vet[0] = Valor;
+        for(int i = 0; i < N-1; i++){
+            if(vet[i] > Valor)
+            Valor += 1;
+
+        }
+
+    Console.WriteLine("MAIOR VALOR " + Maior.ToString("F1"));
+    Console.WriteLine("POSICAO DO MAIOR VALOR = " + Valor);
+
+
+
+}
+}
+}

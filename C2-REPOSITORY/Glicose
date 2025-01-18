@@ -1,0 +1,25 @@
+class glicose {
+
+
+ static void Main(string[] args){
+
+  double glicose = 0;
+
+
+  Console.WriteLine("Digite a media da glicose : ");
+  glicose = double.Parse(Console.ReadLine());
+
+  if(glicose <= 100){
+
+    Console.WriteLine("Classificação: normal ");
+  }
+  else if (glicose <= 140){
+    Console.WriteLine("Classificação: elevado ");
+  }
+
+  else if(glicose >= 141){
+
+    Console.WriteLine("Classificação: diabetes");
+  }
+ }
+}

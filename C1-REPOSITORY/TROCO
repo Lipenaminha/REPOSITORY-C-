@@ -1,0 +1,31 @@
+class troco {
+
+
+
+
+ static void Main(string[] args){
+
+    double produto = 0;
+    int quantidade = 0;
+    double recebido = 0;
+    double troco = 0;
+
+
+    Console.WriteLine("Digite o valor unitário do produto : ");
+    produto = double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Quantidade comprada : ");
+    quantidade = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Dinheiro recebido : ");
+    recebido = double.Parse(Console.ReadLine());
+
+    troco = recebido - (produto * quantidade);
+
+    
+
+    Console.WriteLine($"TROCO = {troco:F2}");
+
+  
+ }
+}

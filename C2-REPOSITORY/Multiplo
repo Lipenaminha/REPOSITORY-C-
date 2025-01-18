@@ -1,0 +1,25 @@
+class multiplos {
+
+
+ static void Main(string[] args){
+
+
+ int N1 = 0;
+ int N2 = 0;
+
+   Console.WriteLine("Digite dois numeros inteiros : ");
+   N1 = int.Parse(Console.ReadLine());
+   N2 = int.Parse(Console.ReadLine());
+
+   if((N1 % N2 == 0) || (N2 % N1 ==0)){
+
+    Console.WriteLine("Sao multiplos");
+
+
+   }
+   else {
+    Console.WriteLine("Nao sao multiplos");
+   }
+
+ }
+}

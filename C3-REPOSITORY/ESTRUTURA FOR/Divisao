@@ -1,0 +1,39 @@
+class Divisao{
+
+
+ static void Main(string[] args){
+
+
+double numerador = 0;
+double denominador = 0;
+int casos = 0;
+double divisao = 0;
+
+Console.WriteLine("Quantos casos voce vai digitar ?");
+casos = int.Parse(Console.ReadLine());
+
+
+for(int i = 1; i <= casos; i++ ){
+
+  Console.WriteLine("Entre com o numerador : ");
+  numerador = double.Parse(Console.ReadLine());
+  Console.WriteLine("Entre com o denominador : ");
+  denominador = double.Parse(Console.ReadLine());
+
+  if(numerador >= 0.0){
+
+    divisao = numerador / denominador;
+
+    Console.WriteLine($"Divisao = {divisao:F2}");
+
+
+
+  }
+  else if (numerador <= 0.0){
+    Console.WriteLine("DIVISAO IMPOSSIVEL");
+  }
+}
+
+
+
+ }

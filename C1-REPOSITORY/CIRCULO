@@ -1,0 +1,21 @@
+class circulo {
+
+
+
+ static void Main(string[] args){
+
+    int raio = 0;
+    double area = 0;
+
+  Console.WriteLine("Digite o valor do raio do circulo ");
+  raio = int.Parse(Console.ReadLine());
+
+  area = Math.PI * (Math.Pow(raio, 2));
+
+  Console.WriteLine($"VALOR DO RAIO : {area:F3}");
+
+
+
+
+ }
+}

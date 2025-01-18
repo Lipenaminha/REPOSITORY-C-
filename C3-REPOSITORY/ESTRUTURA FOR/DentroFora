@@ -1,0 +1,47 @@
+class DentroFora{
+
+
+ static void Main(string[] args){
+
+
+  int N ;
+  int soma = 0;
+  int soma2 = 0;
+ 
+
+Console.WriteLine("Quantos numeros voce vai digitar ? : ");
+ N  = int.Parse(Console.ReadLine());
+
+
+ soma = 0;
+ soma2 = 0;
+
+
+ for(int i = 1; i <= N; i++){
+
+  Console.WriteLine("Digite um numero par ");
+  int numero = int.Parse(Console.ReadLine());
+
+  if(numero >= 10 && numero <= 20){
+    soma += 1;
+
+  }
+  else {
+
+    soma2 += 1;
+
+  
+  }
+ }
+
+ Console.WriteLine($"Dentro {soma}");
+ Console.WriteLine($"Fora {soma2}");
+
+
+
+
+
+  }
+}
+
+

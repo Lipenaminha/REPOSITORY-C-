@@ -1,0 +1,40 @@
+namespace Valores_Negativos {
+
+    class Matrizes_negativos {
+
+        static void Main(string[] args){
+
+            int L , C , i , o ;
+
+            Console.WriteLine("Qual a quantidade de linhas da matriz ");
+            L = int.Parse(Console.ReadLine());
+            Console.WriteLine("Qual a quantidade de colunas da matriz ?");
+            C = int.Parse(Console.ReadLine());
+
+            double[,] mat = new double[L,C];
+
+            double[] vet = new double [L];
+
+            for(i = 0; i < L; i++){
+                for(o = 0; o < C; o++){
+                Console.Write($"Elemento : ");
+                mat[i,o] = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+                }
+            }
+
+
+
+            for(i = 0; i < L; i++){
+                for(o = 0; o < C; o++){
+                   if(mat[i,o] < 0)
+                   {
+                    Console.WriteLine(mat[i,o]);
+                   }
+                    
+                }
+                 }
+            }
+
+
+    }
+}

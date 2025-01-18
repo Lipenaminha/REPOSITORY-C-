@@ -1,0 +1,35 @@
+class Fatorial{
+
+
+ static void Main(string[] args){
+
+
+int fatorial = 0;
+int N = 0;
+
+Console.WriteLine("Digite o valor de N");
+N = int.Parse(Console.ReadLine());
+
+fatorial = 1;
+
+
+for(int i = 2; i <= N; i++ ){
+
+
+
+if(N >= 1 || N <= 15) {
+
+   fatorial *= i;
+
+
+
+}
+
+}
+
+  Console.WriteLine($"FATORIAL = {fatorial}");
+
+
+
+ }
+}

@@ -1,0 +1,31 @@
+class tempo_de_jogo {
+
+
+ static void Main(string[] args){
+
+  int inicio = 0;
+  int final = 0;
+  int dia = 0;
+
+ Console.WriteLine("Horario inicial : ");
+ inicio = int.Parse(Console.ReadLine());
+
+ Console.WriteLine("Horario final : ");
+ final = int.Parse(Console.ReadLine());
+
+ if(inicio < final){
+
+  dia = final - inicio ;
+
+
+ }else{
+
+  dia = 24 - inicio + final;
+ }
+
+ Console.WriteLine($"O JOGO DUROU {dia} HORAS ");
+
+
+
+ }
+}

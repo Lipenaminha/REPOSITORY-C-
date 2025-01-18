@@ -1,0 +1,37 @@
+class ParesConsecutivos{
+
+
+ static void Main(string[] args){
+
+
+int X = 0;
+int SOMA = 0;
+
+while(true){
+
+   Console.WriteLine("Digite um numero inteiro : ");
+   X = int.Parse(Console.ReadLine());
+
+   if(X == 0){
+      break;
+   }
+   else if (X % 2 != 0){
+      X = X+1;
+
+      SOMA = X + X + 2 + X + 4 + X + 6 + X + 8;
+
+      Console.WriteLine($"SOMA = {SOMA:F2}");
+   }
+      else
+      {
+
+       SOMA = X + X + 2 + X + 4 + X + 6 + X + 8; 
+
+         Console.WriteLine($"SOMA = {SOMA:F2}");
+
+      }
+   }
+}
+      }
+
+    

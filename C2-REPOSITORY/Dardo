@@ -1,0 +1,37 @@
+class dardo
+{
+
+
+
+    static void Main(string[] args)
+    {
+
+      double A = 0;
+      double B = 0;
+      double C = 0;
+      double maior = 0;
+
+      Console.WriteLine("Digite as tres distancias : ");
+      A = double.Parse(Console.ReadLine());
+      B = double.Parse(Console.ReadLine());
+      C = double.Parse(Console.ReadLine());
+
+      if(A > B && A > C) {
+         maior = A;
+
+         Console.WriteLine($"MAIOR VALOR = {maior}");
+
+      }
+      else if (B > A && B > C){
+         maior = B;
+
+          Console.WriteLine($"MAIOR VALOR = {maior}");
+
+      }
+      else if(C > A && C > B){
+         maior = C;
+          Console.WriteLine($"MAIOR VALOR = {maior}");
+
+      }
+    }
+}

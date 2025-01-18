@@ -1,0 +1,35 @@
+namespace Matrizes {
+
+    class teste_matrizes {
+
+        static void Main(string[] args){
+
+
+           int L, C , i , o;
+
+           Console.WriteLine("Quantas linhas vai ter a matriz ? ");
+           L = int.Parse(Console.ReadLine());
+           Console.WriteLine("Quantoas colunas vai ter a matriz ? ");
+           C = int.Parse(Console.ReadLine());
+
+           int [,] mat = new int [L, C];
+
+           for(i = 0; i < L; i++){
+             for(o = 0; o < C; o++){
+                Console.Write("Elemento [" + i + "," + o + "]: ");
+                mat[i , o ] = int.Parse(Console.ReadLine());
+             }
+           }
+           Console.WriteLine();
+           Console.WriteLine("Matriz digitada ");
+           for(i = 0; i < L; i++){
+            for(o = 0; o < C; o ++){
+                Console.WriteLine($"{mat[i, o]}" + " ");
+            }
+           }
+           Console.WriteLine();
+
+            
+            }
+        }
+}

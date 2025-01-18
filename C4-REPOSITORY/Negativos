@@ -1,0 +1,51 @@
+class Negativos
+{
+   //declaração do vetor e da variavel 'N' a nivel da classe
+    static double[] Vet;
+    static int N;
+
+static void Main(string[] args){
+
+    Console.WriteLine("Quantos numeros voce vai digitar ? ");
+    N = int.Parse(Console.ReadLine());
+
+   //inicializa o vetor com a quantidade informada.
+    digitarNumeros();
+
+    Console.WriteLine();
+    Console.WriteLine("NUMEROS NEGATIVOS : ");
+    LendoNegativos();
+
+
+}
+
+
+  static void digitarNumeros()
+  {
+    //inicializa o vetor com 'N' elementos
+  vet = new double [N];
+
+  //le os numeros para o vetor
+  for(int i = 0; i < N; i++){
+
+    Console.WriteLine("Digite um numero");
+    vet[i] = double.Parse(Console.ReadLine());
+
+  }
+
+
+  }
+
+//verifica e imprime os numeros negativos.
+static void LendoNegativos(){
+  for(i = 0; i < N; i++){
+    if(vet[i] < 0){
+      Console.WriteLine(vet[i]);
+    }
+  }
+
+  }
+
+
+}
+

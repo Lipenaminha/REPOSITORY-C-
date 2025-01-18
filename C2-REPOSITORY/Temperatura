@@ -1,0 +1,36 @@
+class temperatura
+{
+
+
+
+    static void Main(string[] args)
+    {
+
+      string temperatura = "";
+      double valor = 0;
+      double equivalente = 0;
+
+      Console.WriteLine("Voce vai digitar a temperatura em qual escala (C/F)?");
+      temperatura = Console.ReadLine();
+
+      if(temperatura == "F")
+{
+  Console.WriteLine("Digite a temperatura em Fahrenheit: ");
+  valor = double.Parse(Console.ReadLine());
+
+  equivalente = (valor - 32) * 5/9;
+
+  Console.WriteLine($"Temperatura equivalente em Celsius: {equivalente:F2}");
+
+}
+else if(temperatura == "C"){
+
+   Console.WriteLine("Digite a temperatura em Celsius: ");
+   valor = double.Parse(Console.ReadLine());
+
+   equivalente = valor * 9/5 + 32;
+
+   Console.WriteLine($"Temperatura equivalente em Fahrenheit : {equivalente:F2}");
+}
+    }
+}

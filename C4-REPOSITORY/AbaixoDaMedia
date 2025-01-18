@@ -1,0 +1,53 @@
+namespace AbaixoDaMedia {
+
+    class AbaixoDaMedia {
+
+        static void Main(string[] args){
+
+
+            Console.WriteLine("Quantos elementos vai ter o vetor?");
+            int V = int.Parse(Console.ReadLine());
+
+             double[] vet = new double[V];
+             double Media = 0;
+             double Soma = 0;
+             double[] veta = new double[V];
+
+
+
+             for(int i = 0; i < V; i++){
+             Console.Write("Digite um numero: ");
+                vet[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                Soma += vet[i];
+
+             }
+
+             Media += Soma / V;
+             Console.Write($"MEDIA DO VETOR {Media.ToString("F3", CultureInfo.InvariantCulture)}");
+
+             Console.WriteLine();
+             Console.WriteLine("ELEMENTOS ABAIXO DA MEDIA : ");
+
+             for(int i = 0; i < V; i++){
+                if(vet[i] < Media){
+                     veta[i] += vet[i];
+                     Console.WriteLine($"{veta[i].ToString("F1", CultureInfo.InvariantCulture)}");
+                }
+                else {
+
+                }
+             }
+             
+
+
+
+
+        }
+
+    }
+}
+
+
+
+

@@ -1,0 +1,43 @@
+class ParImpar{
+
+
+ static void Main(string[] args){
+
+int N ;
+
+Console.WriteLine("Quantos numeros voce vai digitar ? : ");
+ N  = int.Parse(Console.ReadLine());
+
+
+
+ for(int i = 1; i <= N; i++){
+
+  Console.WriteLine("Digite um numero ");
+  int numero = int.Parse(Console.ReadLine());
+
+  if(numero == 0){
+
+    Console.WriteLine("NULO");
+
+  }
+  else if(numero % 2 != 0 && numero < 0){
+
+    Console.WriteLine("NUMERO IMPAR NEGATIVO");
+
+  }
+  else if(numero % 2 == 0 && numero > 0){
+    Console.WriteLine("PAR POSITIVO");
+
+  }
+  else if (numero % 2 != 0 && numero > 0){
+    Console.WriteLine("IMPAR POSITIVO ");
+  }
+  else if (numero % 2 == 0 && numero < 0){
+    Console.WriteLine("PAR NEGATIVO ");
+  }
+
+
+
+  }
+
+  }

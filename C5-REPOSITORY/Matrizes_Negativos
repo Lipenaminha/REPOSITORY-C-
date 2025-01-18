@@ -1,0 +1,53 @@
+namespace Matrizes {
+
+    class Matrizes_negativos {
+
+        static void Main(string[] args){
+
+
+            int i, o , M;
+
+
+            Console.WriteLine("Qual a ordem das matrizes ? ");
+            M = int.Parse(Console.ReadLine());
+
+
+
+            int[,] mat = new int [M, M];
+
+            for(i = 0; i < M; i++){
+                for(o = 0; o < M; o++){
+                    Console.WriteLine("Elemento " + i + ", " + o );
+                    (mat[i , o]) = int.Parse(Console.ReadLine());
+                
+                }
+            }
+
+            Console.WriteLine("Diagonal principal : ");
+
+            for(i = 0; i < M; i++){
+                Console.Write(mat[i, i]+ " ");
+
+            }
+
+            Console.WriteLine();
+
+            int cont =0;
+
+            for(i = 0; i < M; i++){
+                for(o = 0; o < M; o++){
+                if(mat[i, o] < 0){
+                    cont += 1;
+                }
+                }
+            }
+            Console.WriteLine($"Numeros negativos : {cont}");
+
+
+
+
+
+
+            }
+        }
+}

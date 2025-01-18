@@ -1,0 +1,25 @@
+class soma {
+
+
+
+
+ static void Main(string[] args){
+
+  int x = 0;
+  int y = 0;
+  int soma = 0;
+
+  Console.WriteLine("Digite o valor de X ");
+  x = int.Parse(Console.ReadLine());
+
+  Console.WriteLine("Digite o valor de Y ");
+  y = int.Parse(Console.ReadLine());
+
+  soma = x + y;
+
+  Console.WriteLine("SOMA = "+ soma);
+  
+  
+  
+ }
+}

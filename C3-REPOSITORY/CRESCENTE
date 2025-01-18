@@ -1,0 +1,33 @@
+class crescente {
+
+
+ static void Main(string[] args){
+
+
+int X = 0;
+int Y = 0;
+
+Console.WriteLine("Digite dois numeros : ");
+X = int.Parse(Console.ReadLine());
+Y = int.Parse(Console.ReadLine());
+
+while(X != Y){
+
+
+  if(Y < X){
+    Console.WriteLine("DECRESCENTE");
+  }
+  else if (Y > X){
+    Console.WriteLine("CRESCENTE");
+  }
+
+  Console.WriteLine("Digite dois numeros : ");
+X = int.Parse(Console.ReadLine());
+Y = int.Parse(Console.ReadLine());
+
+
+}
+
+
+ }
+}

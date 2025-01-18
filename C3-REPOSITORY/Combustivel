@@ -1,0 +1,43 @@
+class Combustivel{
+
+
+ static void Main(string[] args){
+
+   int codigo = 0;
+   int alcool = 0;
+   int gasolina = 0;
+   int diesel = 0;
+
+
+   while(true){
+
+      Console.WriteLine("Informe um codigo (1, 2, 3) ou 4 para parar:");
+      codigo = int.Parse(Console.ReadLine());
+
+      if(codigo == 1 ){
+         alcool = alcool + 1;
+
+      }
+      else if (codigo == 2){
+         gasolina = gasolina + 1;
+      }
+
+      else if (codigo == 3){
+         diesel = diesel + 1;
+
+      }
+      else if (codigo == 4){
+         Console.WriteLine("MUITO OBRIGADO !");
+         break;
+         
+      }
+
+
+   }
+
+   Console.WriteLine($"Alcool : {alcool}");
+    Console.WriteLine($"Gasolina : {gasolina}");
+     Console.WriteLine($"Diesel : {diesel}");
+   
+      }
+}

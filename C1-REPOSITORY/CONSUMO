@@ -1,0 +1,25 @@
+class consumo {
+
+
+ static void Main(string[] args){
+
+    int distancia = 0;
+    double quantidade = 0;
+    double consumo = 0;
+
+
+    Console.WriteLine("DISTANCIA PERCORRIDA : ");
+    distancia = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("COMBUSTIVEL GASTO : ");
+    quantidade = double.Parse(Console.ReadLine());
+
+    consumo = distancia / quantidade;
+
+    
+
+    Console.WriteLine($"CONSUMO MEDIO =  {consumo:F3}");
+
+  
+ }
+}

@@ -1,0 +1,30 @@
+class terreno
+
+{
+
+
+
+    static void Main(string[] args){
+
+        Console.WriteLine("Digite a largura do terreno : ");
+        double largura = Double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite o comprimento do terreno : ");
+        double comprimento = Double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite o valor do metro quadrado : ");
+        double metroquadrado = Double.Parse(Console.ReadLine());
+
+        double area_do_terreno = largura * comprimento;
+
+        double preco_do_terreno = area_do_terreno * metroquadrado;
+
+        Console.WriteLine("AREA DO TERRENO " + area_do_terreno.ToString("F2"));
+        Console.WriteLine("PRECO DO TERRENO " + preco_do_terreno.ToString("F2"));
+
+
+
+
+
+    }
+}

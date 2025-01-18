@@ -1,0 +1,39 @@
+class MEDIADAIDADES {
+
+
+ static void Main(string[] args){
+
+    double idade = 0;
+    double soma = 0;
+    int cont = 0;
+    double media = 0;
+
+
+    Console.WriteLine("Digite as idades ");
+    idade = int.Parse(Console.ReadLine());
+
+    while(idade >= 0){
+
+      soma = soma + idade;
+      cont = cont + 1;
+
+      idade = int.Parse(Console.ReadLine());    
+    }
+
+    if (cont == 0){
+      Console.WriteLine("IMPOSSIVEL CALCULAR ");
+    }
+    else {
+
+      media = soma / cont;
+
+      Console.WriteLine($"MEDIA = {media:F2}");
+
+    }
+
+
+
+
+    }
+
+ }

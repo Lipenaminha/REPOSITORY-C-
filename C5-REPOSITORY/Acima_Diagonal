@@ -1,0 +1,36 @@
+namespace Acima_Diagonal {
+
+    class Acima_Diagonal {
+
+        static void Main(string[] args){
+
+            int L , i , o ;
+
+            Console.WriteLine("Qual a ordem da matriz ? ");
+            L = int.Parse(Console.ReadLine());
+
+            double[,] mat = new double[L , L];
+
+            for(i = 0; i < L; i++){
+                for(o = 0; o < L; o++){
+                Console.WriteLine("Elemento ["+ i + "," + o + "]: ");
+                mat[i,o] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                
+                }
+            }
+            double soma = 0;
+            for(i = 0; i < L; i++){
+                for(o = i + 1; o < L; o++){
+                   soma += mat[i,o];
+                   
+    
+                }
+
+            }
+            Console.WriteLine("SOMA DOS ELEMENTOS ACIMA DA DIAGONAL PRINCIPAL = " + soma);
+
+        }
+
+            }
+
+        }

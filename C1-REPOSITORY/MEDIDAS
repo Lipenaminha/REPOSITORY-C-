@@ -1,0 +1,35 @@
+class medidas {
+
+
+ static void Main(string[] args){
+
+    double A = 0;
+    double B = 0;
+    double C = 0;
+    double quadrado = 0;
+    double triangulo = 0;
+    double trapezio = 0;
+
+
+    Console.WriteLine("Digite a medida A: ");
+    A = double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite a medida B: ");
+    B = double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite a medida C: ");
+    C = double.Parse(Console.ReadLine());
+
+    quadrado = Math.Pow(A, 2);
+    triangulo = (A * B) / 2;
+    trapezio = (A + B) * C /2;
+
+    
+
+    Console.WriteLine($"CONSUMO MEDIO =  {quadrado:F4}");
+    Console.WriteLine($"CONSUMO MEDIO =  {triangulo:F4}");
+    Console.WriteLine($"CONSUMO MEDIO =  {trapezio:F4}");
+
+  
+ }
+}

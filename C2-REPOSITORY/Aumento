@@ -1,0 +1,63 @@
+class Aumento{
+
+
+    static void Main(string[] args){
+        
+  double salario = 0;
+  double aumento = 0;
+  double novosalario = 0;
+
+  Console.WriteLine("Digite o salario da pessoa : ");
+  salario = double.Parse(Console.ReadLine());
+
+  if(salario <= 1000){
+
+    aumento = (20 * salario) / 100;
+    novosalario = salario + aumento;
+
+    
+
+    Console.WriteLine($"Novo salario {novosalario:F2}");
+    Console.WriteLine($"Aumento {aumento}");
+    Console.WriteLine("Porcentagem = 20% ");
+
+  }
+  else if(salario <= 3000){
+
+    aumento = (15 * salario) / 100;
+    novosalario = salario + aumento;
+
+    Console.WriteLine($"Novo salario {novosalario:F2}");
+    Console.WriteLine($"Aumento {aumento}");
+    Console.WriteLine("Porcentagem = 15% "); 
+
+
+  }
+
+  else if (salario <= 8000){
+
+    aumento = (10 * salario) / 100;
+    novosalario = salario + aumento;
+
+    Console.WriteLine($"Novo salario {novosalario:F2}");
+    Console.WriteLine($"Aumento {aumento}");
+    Console.WriteLine("Porcentagem = 10% ");
+
+
+  }
+  else if(salario >= 8001){
+
+    aumento = (5 * salario) / 100;
+    novosalario = salario + aumento;
+
+    Console.WriteLine($"Novo salario {novosalario:F2}");
+    Console.WriteLine($"Aumento {aumento}");
+    Console.WriteLine("Porcentagem = 15% ");
+
+  }
+  
+
+
+ 
+ }
+}

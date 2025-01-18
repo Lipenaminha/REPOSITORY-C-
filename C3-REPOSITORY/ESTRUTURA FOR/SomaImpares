@@ -1,0 +1,45 @@
+class soma_impares{
+
+
+ static void Main(string[] args){
+
+
+  int impares1 , impares2, soma;
+
+
+Console.WriteLine("Digite dois numeros : ");
+impares1 = int.Parse(Console.ReadLine());
+impares2 = int.Parse(Console.ReadLine());
+
+
+if(impares1 > impares2){
+int dif = impares1;
+impares1 = impares2;
+impares2 = dif;
+
+  
+
+}
+
+
+
+
+soma = 0;
+
+for (int i = impares1; i < impares2; i++){
+
+  if(i % 2 != 0){
+
+    soma += i;
+
+  }
+}
+
+ Console.WriteLine($"SOMA = {soma}");
+
+
+
+
+   }
+}
+      

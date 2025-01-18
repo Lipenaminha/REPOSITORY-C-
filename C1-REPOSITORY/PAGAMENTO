@@ -1,0 +1,22 @@
+class pagamento {
+
+
+
+ static void Main(string[] args){
+
+   string nome = "Joao Silva";
+   double hora = 50.00;
+   int trabalho = 60;
+   double pagamento = 0;
+
+   Console.WriteLine($"Nome : {nome}");
+   Console.WriteLine($"Valor por hora : {hora}");
+   Console.WriteLine($"Horas trabalhadas : {trabalho}");
+
+   pagamento = hora * trabalho;
+
+   Console.WriteLine($"O pagamento para {nome} deve ser de {pagamento:F2}");
+
+
+ }
+}

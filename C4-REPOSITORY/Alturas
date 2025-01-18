@@ -1,0 +1,107 @@
+class Alturas
+{
+
+   static int i, N = 0;
+   static double media = 0;
+
+static string [] nome = new string[N];
+static int [] idade =  new int [N];
+static double [] altura = new double [N];
+
+
+
+static void Main(string[] args){
+
+    Console.WriteLine("Quantas pessoas serao digitadas?");
+     N = int.Parse(Console.ReadLine());
+
+      nome = new string[N];
+     idade = new int [N];
+     altura = new double[N];
+
+    LerCaracteristicas(nome, idade, altura);
+
+     double alturaMedia = AlturaMedia(altura);
+     Console.WriteLine($"Altura media = {alturaMedia.ToString("F2",CultureInfo.InvariantCulture)}");
+
+     int menosIdade = MenosIdade(idade);
+     double porcentagemMenosIdade = (menosIdade / (double)N) * 100;
+     Console.WriteLine($" Pessoas com menos de 16 anos : {porcentagemMenosIdade.ToString("F1",CultureInfo.InvariantCulture)}%"); 
+
+     string nomes = ExibirNome(nome);
+     Console.WriteLine(nomes);
+
+
+
+    
+
+}
+
+static void LerCaracteristicas(string[]nome , int[]idade ,  double[] altura){
+
+    
+    string resultado = "";
+
+for(i = 0; i < N; i++){
+    Console.WriteLine($"Dados da {i+1} pessoa");
+    Console.Write("Nome : ");
+    nome[i] = (Console.ReadLine());
+    Console.Write("Idade : ");
+    idade[i] = int.Parse(Console.ReadLine());
+    Console.Write("Altura : ");
+    altura[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+}
+
+}
+
+static double AlturaMedia(double[] altura){
+
+    double alturaMedia = 0.0;
+    int N = altura.Length;
+
+     for(int i = 0; i < N; i++){
+        alturaMedia += altura[i];
+     }
+     if(N > 0){
+        alturaMedia /= N;
+     }
+     {
+        return alturaMedia;
+     }
+
+}
+
+static int MenosIdade(int[] idade){
+
+    int menosIdade = 0;
+    int N = altura.Length;
+    for(i = 0; i < N; i++){
+        if(idade[i] < 16){
+            menosIdade++;
+        }
+
+
+    }
+    {
+        return menosIdade;
+    }
+
+}
+
+static string ExibirNome(string[]nome){
+
+    string nomes = "";
+    for(int i = 0; i < nome.Length; i++){
+        if(idade[i] < 16){
+
+            nomes += nome[i] + "\n";
+        }
+    }
+        return nomes.Trim();
+}
+
+
+
+}
+

@@ -1,0 +1,63 @@
+class Experiencias
+{
+
+static void Main(string[] args){
+
+int N = 0;
+string cobaias;
+double quantidade = 0;
+double C, R , S;
+
+
+  Console.WriteLine("QUANTOS CASOS DE TESTES SERÃO DIGITADOS ?");
+  N = int.Parse(Console.ReadLine());
+
+  R = 0.0;
+  S = 0.0;
+  C = 0.0;
+
+  for(int i = 1; i <= N; i++){
+
+    Console.WriteLine("Quantidade de cobaias ");
+    quantidade = int.Parse(Console.ReadLine());
+    Console.WriteLine("Digite o tipo de cobaia : ");
+    cobaias = Console.ReadLine();
+
+    if(cobaias == "R"){
+
+      R += quantidade;
+
+    }
+    else if(cobaias == "S"){
+      S += quantidade;
+    }
+    else if(cobaias == "C"){
+      C += quantidade;
+    }
+
+  }
+
+  double porC = 0.0;
+  double PorR = 0.0;
+  double PorS = 0.0;
+
+  
+  quantidade = R + S + C;
+  porC = C / quantidade * 100;
+  PorR = R / quantidade * 100;
+  PorS = S / quantidade * 100;
+  
+
+
+
+  Console.WriteLine($"Total : {quantidade}");
+  Console.WriteLine($"Total de coelhos {C}");
+  Console.WriteLine($"Total de coelhos {R}");
+  Console.WriteLine($"Total de coelhos {S}");
+
+  Console.WriteLine($"PERCENTUAL DE COELHOS {porC:F2}");
+  Console.WriteLine($"PERCENTUAL DE RATOS {PorR:F2}");
+  Console.WriteLine($"PERCENTUAL DE SAPOS {PorS:F2}");
+
+}
+    }

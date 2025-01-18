@@ -1,0 +1,56 @@
+class NumerosPares
+{
+
+static int N = 0;
+ static int [] numeros;
+static void Main(string[] args){
+
+    Console.WriteLine("Quantos numeros voce vai digitar ?");
+    N = int.Parse(Console.ReadLine());
+
+    numeros = new int[N];
+
+    //aqui estamos solicitando a lista e o metodo.
+    List<int> pares = Guarda(numeros);
+
+
+     Console.WriteLine("Números pares digitados:");
+    
+     foreach(int par in pares){
+        Console.Write(par + " ");
+     }
+     
+     // abaixo inseri a quantidade de numeros pares e a sintaxe '.Count' busca a quantidade de numeros do array ou vetor.
+     Console.WriteLine($"\nQuantidade de numeros pares : {pares.Count}");
+
+ // par é a variavel que representa cada elemento individual dentro da coleção pares.
+     // pares é uma coleção que contem varios numeros; Ex : array , vetor.
+     // o foreach itera sobre cada elemento em pares. Para cada iteração ele atribui o valor a 'par'
+
+
+}
+
+
+static List<int> Guarda(int[]numeros){
+
+// lista que introduz somente os que forem incrementando
+    List<int> pares = new List<int>();
+    int cont = 0;
+  
+
+    for(int i = 0; i < numeros.Length; i++){
+        Console.WriteLine("Digite um numero");
+        numeros[i] = int.Parse(Console.ReadLine());
+
+        if(numeros[i] % 2 == 0){
+              cont += 1;
+            // abaixo está solicitando para incrementar os numeros pares, no caso está incrementando na sintaxe da lista que foi colocada acima
+            pares.Add(numeros[i]);
+
+        }
+    }
+    // o return retorna alguma coisa quando precisa retornar > e é obrigatoriamente ter uma variavel do tipo do metodo
+    return pares;
+}
+}
+

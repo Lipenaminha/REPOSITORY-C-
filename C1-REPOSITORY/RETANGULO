@@ -1,0 +1,30 @@
+class retangulo {
+
+
+
+ static void Main(string[] args){
+
+    int Base = 0;
+    int Altura = 0;
+    double Area = 0;
+    double Perimetro = 0;
+    double Diagonal = 0;
+
+
+
+    Console.WriteLine("Base do retangulo : ");
+    Base = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Altura do retangulo : ");
+    Altura = int.Parse(Console.ReadLine());
+
+    Area = Base * Altura;
+    Perimetro = 2 * (Base + Altura);
+    Diagonal = Math.Sqrt(Math.Pow(Base, 2) + Math.Pow(Altura , 2 ));
+
+    Console.WriteLine($"AREA :  {Area:F4}");
+    Console.WriteLine($"PERIMETRO : {Perimetro:F4}");
+    Console.WriteLine($"DIAGONAL :  {Diagonal:F4}");
+
+ }
+}

@@ -1,0 +1,44 @@
+namespace Soma_Linhas {
+
+    class Soma_linhas {
+
+        static void Main(string[] args){
+
+            int L , C , i , o ;
+
+            Console.WriteLine("Qual a quantidade de linhas da matriz ");
+            L = int.Parse(Console.ReadLine());
+            Console.WriteLine("Qual a quantidade de colunas da matriz ?");
+            C = int.Parse(Console.ReadLine());
+
+            double[,] mat = new double[L,C];
+
+            double[] vet = new double [L];
+
+            for(i = 0; i < L; i++){
+                for(o = 0; o < C; o++){
+                Console.WriteLine($"Digite os elementos da {i+1} linha ");
+                mat[i,o] = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
+                }
+            }
+
+
+            for(i = 0; i < L; i++){
+                vet[i] = 0;
+                for(o = 0; o < C; o++){
+                    vet[i] += mat[i,o];
+
+                    
+                }
+            }
+
+            Console.WriteLine("VETOR GERADO : ");
+            for(i = 0; i < L; i++){
+                Console.WriteLine(vet[i].ToString("F1"),CultureInfo.InvariantCulture);
+            }
+
+
+
+        }
+    }
+}

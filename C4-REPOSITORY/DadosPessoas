@@ -1,0 +1,91 @@
+using System.ComponentModel.DataAnnotations;
+using System.Dynamic;
+using System.Globalization;
+
+namespace DadosPessoas {
+
+    class DadosPessoas {
+
+        static void Main(string[] args){
+
+
+            Console.WriteLine("Quantas pessoas serão digitadas ? ");
+            int P = int.Parse(Console.ReadLine());
+
+             double [] altura = new double[P];
+             char [] genero = new char[P];
+             double Menor;
+             double Maior;
+             double Media;
+             double Mediaa;
+             double Soma;
+             int Homens;
+             int Indice;
+
+
+
+
+
+             for(int i = 0; i < P; i++){
+             Console.Write($"Altura da {i+1}a pessoa : ");
+             altura[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+             Console.Write($"Genero da {i+1}a pessoa : ");
+             genero[i] = char.Parse(Console.ReadLine());
+
+        }
+
+        Menor = altura[0];
+
+
+        Console.WriteLine("Menor Altura : ");
+
+        for(int i = 1; i < P; i++){
+            if(altura[i] < Menor){
+                Menor = altura[i];
+            }
+          
+        }
+        Console.WriteLine($"{Menor.ToString("F2", CultureInfo.InvariantCulture)}");
+
+        Maior = altura[0];
+
+        Console.WriteLine("Maior Altura : ");
+
+        for(int i = 1; i < P; i ++){
+            if(altura[i] > Maior){
+                Maior = altura[i];
+            }
+        }
+        Console.WriteLine($"{Maior.ToString("F2", CultureInfo.InvariantCulture)}");
+
+      
+
+        Console.WriteLine("Media das alturas das mulheres : ");
+
+        Media = 0;
+        Indice = 0;
+
+        for(int i = 0; i < P; i++){
+            if(altura[i] > 0){
+                Media += altura[i];
+                Indice += 1;
+            }
+            }
+            
+        Soma = Media / Indice;
+
+        Console.WriteLine($"{Soma.ToString("F2", CultureInfo.InvariantCulture)}");
+
+        
+
+
+
+      
+    }
+    }
+
+}
+
+
+
+

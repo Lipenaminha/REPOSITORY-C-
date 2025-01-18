@@ -1,0 +1,46 @@
+class Cordenadas{
+
+    static void Main(string[] args){
+double X = 0;
+double Y = 0;
+
+Console.WriteLine("Valor de X : ");
+X = double.Parse(Console.ReadLine());
+
+Console.WriteLine("Valor de Y :");
+Y = double.Parse(Console.ReadLine());  
+
+if(X > 0 & Y > 0){
+
+  Console.WriteLine("Q1");
+}
+else if(X < 0 & Y > 0){
+
+  Console.WriteLine("Q2");
+
+}
+else if (X < 0 & Y < 0){
+  Console.WriteLine("Q3");
+}
+else if (X > 0 & Y < 0){
+
+  Console.WriteLine("Q4");
+
+}
+else if(X == 0 & Y ==0){
+  Console.WriteLine("ORIGEM");
+}
+
+else if (X == 0){
+
+  Console.WriteLine("EIXO Y ");
+
+} 
+else {
+
+Console.WriteLine("EIXO X ");
+}
+
+}
+
+}

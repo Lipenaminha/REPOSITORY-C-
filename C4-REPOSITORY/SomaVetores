@@ -1,0 +1,37 @@
+namespace SomaVetores {
+
+    class SomaVetores {
+
+        static void Main(string[] args){
+
+
+            Console.WriteLine("Quantos valores vai ter cada vetor ?");
+            int V = int.Parse(Console.ReadLine());
+
+             int[] vet = new int[V];
+             int[] vetb = new int [V];
+             int[] vetr = new int [V];
+
+             Console.WriteLine("Digite os valores do vetor A");
+             for(int i = 0; i < V; i++){
+                vet[i] = int.Parse(Console.ReadLine());
+
+             }
+
+               Console.WriteLine("Digite os valores do vetor B");
+             for(int i = 0; i < V; i++){
+                vetb[i] = int.Parse(Console.ReadLine());
+
+             }
+
+             for(int i = 0; i < V; i++){
+                vetr[i] = vet[i] + vetb[i];
+                Console.WriteLine($"VETOR RESULTANTE: {vetr[i]}");
+             }
+
+
+
+        }
+
+    }
+}
