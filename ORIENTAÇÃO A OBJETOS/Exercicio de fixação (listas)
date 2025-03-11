@@ -1,0 +1,94 @@
+namespace Course
+{
+    class Listas
+    {
+
+        public int Id { get;  set; }
+        public string Nome { get; set; }
+
+        public double Salario { get; private set; }
+
+
+        public Listas(int id, string nome,double salario)
+        {
+            Id = id;
+            Nome = nome;
+            Salario = salario;
+        }
+
+        public void Porcentagem(double porcentagem)
+        {
+            Salario += Salario * porcentagem / 100.0;
+        }
+        public override string ToString()
+        {
+            return Id
+                + ", "
+                + Nome
+                + ", "
+                + Salario.ToString("F2", CultureInfo.InvariantCulture);
+        }
+
+    }
+
+}
+
+namespace Couse
+{
+    class Conta
+    {
+
+
+        static void Main(string[] args)
+        {
+
+            CultureInfo CI = CultureInfo.InvariantCulture;
+
+            Console.WriteLine("Quantos funcionarios  : ");
+            int N = int.Parse(Console.ReadLine());
+
+
+            List<Listas> List = new List<Listas>();
+
+            for (int i = 1; i <= N; i++)
+            {
+                Console.WriteLine("Funcionarios  #" + i + ":");
+                Console.WriteLine("ID : ");
+                int Id = int.Parse(Console.ReadLine());
+                Console.WriteLine("Nome : ");
+                string Nome = Console.ReadLine();
+                Console.WriteLine("Salario : ");
+                double Salario = Double.Parse(Console.ReadLine());
+                List.Add(new Listas(Id, Nome, Salario));
+
+            }
+
+            Console.WriteLine("ENTRA COM O ID DO FUNCIONARIO PARA TER O AUMENTO : ");
+            double Idsalario = double.Parse(Console.ReadLine());
+
+            Listas list = List.Find(x => x.Id == Idsalario);
+            if(list != null)
+            {
+                Console.WriteLine("Entra com a porcentagem : ");
+                double percentage = double.Parse(Console.ReadLine(), CI);
+                list.Porcentagem(percentage);
+                
+            }
+            else {
+                Console.WriteLine("Esse id não existe ! ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Lista de funcionarios : ");
+            foreach(Listas obj in List)
+            {
+                Console.WriteLine(obj);
+            }
+                    Console.ReadKey();
+
+
+                }
+
+            }
+        }
+    
