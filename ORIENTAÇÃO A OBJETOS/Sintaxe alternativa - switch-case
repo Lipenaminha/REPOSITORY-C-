@@ -1,0 +1,45 @@
+
+            int E = int.Parse(Console.ReadLine());
+
+            string DAY;
+
+            switch (E)
+            {
+                case 1:
+                    DAY = "SUNDAY";
+                        break;
+                case 2:
+                    DAY = "MONDAY";
+                    break;
+                case 3:
+                    DAY = "TUERSDAY";
+                    break;
+                case 4:
+                    DAY = "WENDSDAY";
+                    break;
+                case 5:
+                    DAY = "THUERSDAY";
+                    break;
+                case 6:
+                    DAY = "FRIDAY";
+                    break;
+                case 7:
+                    DAY = "SATURDAY";
+                    break;
+
+                default:
+                    DAY = "INVALID VALUE";
+                    break;
+            }
+
+            Console.WriteLine("DAY : " + DAY);
+
+            Console.ReadKey();
+                
+            }
+            
+
+
+        }
+
+    }
