@@ -1,0 +1,44 @@
+
+            string original = "abcde FGHIJ ABC abc DEFG ";
+            //escreve a original toda em maiuscula
+            string s1 = original.ToUpper();
+            //escreve a original toda em minuscula 
+            string s2 = original.ToLower();
+            //remove o espaço em branco do começo e fim
+            string s3 = original.Trim();
+
+            //procura a posição da palavra que voce coloca em parenteses
+            int n1 = original.IndexOf("bc");
+            // procura a posição final da string que voce coloca em parentes
+            int n2 = original.LastIndexOf("bc");
+            // ele corta a string a partir da posição que voce solicitar- lembrar que sempre começa com 0
+            string s4 = original.Substring(3);
+            // ele corta a posição 3 e a posição 5
+            string s5 = original.Substring(3, 5);
+            // Ele substitui as strings mencionadas nos parenteses - ex : a por x
+            string s6 = original.Replace('a', 'x');
+            // Ele substitui as strings mencionadas nos parenteses - ex : abc por xy
+            string s7 = original.Replace("abc", "xy");
+            // verifica se a string original e nula ou vazia
+            bool b1 = String.IsNullOrEmpty(original);
+            // testa se a variavel e nula ou varios espaço em branco 
+            bool b2 = String.IsNullOrWhiteSpace(original);
+            //faz com que o usuario digita as strings ou numeros com espaço em branco
+            string.Split(' ');
+
+
+            Console.WriteLine("Original: -" + original + "-");
+            Console.WriteLine("ToUpper: -" + s1 + "-");
+            Console.WriteLine("ToLower: -" + s2 + "-");
+            Console.WriteLine("Trim: -" + s3 + "-");
+            Console.WriteLine("IndexOf('bc'): " + n1);
+            Console.WriteLine("LastIndexOf('bc'): " + n2);
+            Console.WriteLine("Substring(3): -" + s4 + "-");
+            Console.WriteLine("Substring(3, 5): -" + s5 + "-");
+            Console.WriteLine("Replace('a', 'x'): -" + s6 + "-");
+            Console.WriteLine("Replace('abc', 'xy'): -" + s7 + "-");
+            Console.WriteLine("IsNullOrEmpty: " + b1);
+            Console.WriteLine("IsNullOrWhiteSpace: " + b2);
+
+
+            Console.ReadKey();
