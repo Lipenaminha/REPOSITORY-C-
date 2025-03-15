@@ -1,0 +1,31 @@
+TimeSpan a1 = new TimeSpan(0, 1, 30);
+Console.WriteLine(a1);
+Console.WriteLine(a1.Ticks);
+
+
+//construtores
+TimeSpan t1 = new TimeSpan();
+TimeSpan t2 = new TimeSpan(900000000L);
+TimeSpan t3 = new TimeSpan(2, 11, 21);
+TimeSpan t4 = new TimeSpan(1, 2, 11, 21);
+TimeSpan t5 = new TimeSpan(1, 2, 11, 21, 321);
+
+Console.WriteLine(t1);
+Console.WriteLine(t2);
+Console.WriteLine(t3);
+Console.WriteLine(t4);
+Console.WriteLine(t5);
+
+// metodos from
+TimeSpan c1 = TimeSpan.FromDays(1.5);
+TimeSpan c2 = TimeSpan.FromHours(1.5);
+TimeSpan c3 = TimeSpan.FromMinutes(1.5);
+TimeSpan c4 = TimeSpan.FromSeconds(1.5);
+TimeSpan c5 = TimeSpan.FromMilliseconds(1.5);
+TimeSpan c6 = TimeSpan.FromTicks(900000000L);
+Console.WriteLine(c1);
+Console.WriteLine(c2);
+Console.WriteLine(c3);
+Console.WriteLine(c4);
+Console.WriteLine(c5);
+Console.WriteLine(c6);
